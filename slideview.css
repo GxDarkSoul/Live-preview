@@ -1,0 +1,59 @@
+.wrapper {
+  position: relative;
+  width: 62%;
+  margin: auto;
+  overflow: hidden;
+}
+.slideview {
+  margin-top: 50px;
+  margin-bottom: 180px;
+  transition-duration: 2s;
+  display: flex;
+  width: 100%;
+}
+.slideview img {
+  width: 500px;
+  height: 1000px;
+  border-radius: 15px;
+}
+.wrapper .navigation {
+  position: absolute;
+  left: 34%;
+  bottom: 10%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+.wrapper .navigation a {
+  border-radius: 50%;
+  margin-right: 10px;
+  display: inline-block;
+  background-color: rgba(0,0,0,0.2);
+  height: 35px;
+  width: 35px;
+  text-decoration: none;
+}
+.wrapper .navigation a:first-child {
+  color: black;
+}
+.wrapper .navigation a:hover {
+  transition: 1s;
+  background-color: rgba(0,0,0,0.6);
+}
+#slide-1:target ~ .slideview {
+  margin-left: 1px;
+}
+#slide-2:target ~ .slideview {
+  margin-left: -101%;
+}
+#slide-3:target ~ .slideview {
+  margin-left: -202%;
+}
+#slide-4:target ~ .slideview {
+  margin-left: -302%;
+}
+@media screen and (max-width:800px) {
+  .wrapper {
+    width: 90%;
+  }
+}
